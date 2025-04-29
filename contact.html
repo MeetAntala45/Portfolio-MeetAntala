@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Antala | Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Meet Antala</div>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Contact Me</h2>
+                <p>Have a project in mind? Let's connect!</p>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="social-links">
+                        <a href="#" target="_blank" class="social-icon">
+                            <i class="fas fa-envelope"></i> <!-- Corrected Font Awesome class for LinkedIn -->
+                        </a>
+                    </div>
+                    <p>
+                        <a href="#" onclick="copyEmail()">meetantala36@gmail.com</a>
+                    </p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/meet-antala/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i> <!-- Corrected Font Awesome class for LinkedIn -->
+                        </a>
+                    </div>
+                    <p><a href="https://www.linkedin.com/in/meet-antala/" target="_blank">Meet Antala</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/meet_antala_45/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i> <!-- Corrected Font Awesome class for LinkedIn -->
+                        </a>
+                    </div>
+                    <p><a href="https://www.instagram.com/meet_antala_45/" target="_blank">@meet_antala_45</a></p>
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Meet Antala. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Copy Email Function
+        function copyEmail() {
+            navigator.clipboard.writeText('meetantala36@gmail.com').then(function () {
+                alert('Email copied to clipboard!');
+            }, function (err) {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+
+</body>
+
+</html>

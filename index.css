@@ -1,0 +1,198 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+
+/* Hero Section */
+.hero {
+    background-color: #dcdcdc;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #232528;
+}
+
+.hero-content h2 span {
+    color: #232528;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #3a3c40;
+}
+
+.btn {
+    display: inline-block;
+    background: #282a2d;
+    color: #ffffff;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #2e334a;
+}
+
+/* About Section */
+.about {
+    background: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about p {
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* Social Links Section */
+.social-links {
+    margin-top: 30px;
+    text-align: center;
+    /* Center the icons */
+}
+
+.social-links .social-icon {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 24px;
+    /* Set icon size */
+    color: #333;
+    /* Classic dark color */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links .social-icon:hover {
+    color: #617b91;
+    /* Highlight color on hover */
+    transform: scale(1.2);
+    /* Slightly enlarge icon */
+}
+
+.social-links .social-icon i {
+    font-size: 2rem;
+    /* Larger icons */
+    transition: transform 0.3s ease;
+}
+
+/* ---------------------- */
+/* Responsive Design Below */
+/* ---------------------- */
+
+@media (max-width: 1024px) {
+
+    /* For tablets and smaller laptops */
+    .hero-content h2 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .about h2 {
+        font-size: 32px;
+    }
+
+    .about p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* For tablets and large phones */
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+
+    .social-links .social-icon {
+        margin: 0 10px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* For mobile phones */
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 26px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .about {
+        padding: 60px 0;
+    }
+
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .about p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .social-links .social-icon {
+        margin: 0 8px;
+        font-size: 20px;
+    }
+
+    .social-links .social-icon i {
+        font-size: 1.5rem;
+    }
+}

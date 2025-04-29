@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Antala</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+
+
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Meet Antala</div>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>Hello, I'm <span>Meet Antala</span></h2>
+            <p>A passionate Computer Engineering Student crafting beautiful web experiences.</p>
+            <a href="project.html" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate Computer Engineering student with a strong interest in software development,
+                problem-solving, and emerging technologies. With a solid foundation in coding and data structures. I aim
+                to create innovative solutions that make a real-world impact.</p>
+
+            <!-- Social Links Section -->
+            <div class="social-links">
+                <a href="#" onclick="copyEmail()" class="social-icon">
+                    <i class="fas fa-envelope"></i> <!-- Corrected Font Awesome class for Email -->
+                </a>
+                <a href="https://www.linkedin.com/in/meet-antala/" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i> <!-- Corrected Font Awesome class for LinkedIn -->
+                </a>
+                <a href="https://github.com/MeetAntala45" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i> <!-- Corrected Font Awesome class for GitHub -->
+                </a>
+                <a href="https://www.instagram.com/meet_antala_45/" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i> <!-- Corrected Font Awesome class for Instagram -->
+                </a>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Meet Antala. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Copy Email Function
+        function copyEmail() {
+            navigator.clipboard.writeText('meetantala36@gmail.com').then(function () {
+                alert('Email copied to clipboard!');
+            }, function (err) {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+</body>
+
+
+
+</html>
