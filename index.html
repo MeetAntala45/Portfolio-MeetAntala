@@ -1,100 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet Antala | Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet Antala</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-</head>
-
-
-
-
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div class="container nav-container">
-            <div class="logo">Meet Antala</div>
-            <nav>
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="project.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+      <div class="nav-container">
+        <div class="logo">Meet Antala</div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
         </div>
+        <nav>
+          <ul id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <nav id="mobile-menu" class="mobile-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <h2>Hello, I'm <span>Meet Antala</span></h2>
-            <p>A passionate Computer Engineering Student crafting beautiful web experiences.</p>
-            <a href="project.html" class="btn">View My Work</a>
-        </div>
+    <section class="hero" id="home">
+      <img src="images/meet45.jpg" alt="Profile" class="hero-img" />
+      <h2>Hey, I'm <span>Meet Antala</span></h2>
+      <p>
+        Full-Stack Web Developer committed to building secure, responsive, and
+        user-friendly web applications.
+      </p>
+      <div class="hero-buttons">
+        <a href="docs/Meet_Antala.pdf" class="btn light" download
+          >Resume <i class="fas fa-download"></i
+        ></a>
+      </div>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/meet-antala" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/MeetAntala45" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://instagram.com/meet_antala_45" target="_blank">
+          <i class="fab fa-instagram"></i
+        ></a>
+        <a href="#" onclick="copyEmail()"><i class="fas fa-envelope"></i></a>
+      </div>
     </section>
 
-    <section class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a passionate Computer Engineering student with a strong interest in software development,
-                problem-solving, and emerging technologies. With a solid foundation in coding and data structures. I aim
-                to create innovative solutions that make a real-world impact.</p>
-
-            <!-- Social Links Section -->
-            <div class="social-links">
-                <a href="#" onclick="copyEmail()" class="social-icon">
-                    <i class="fas fa-envelope"></i> <!-- Corrected Font Awesome class for Email -->
-                </a>
-                <a href="https://www.linkedin.com/in/meet-antala/" target="_blank" class="social-icon">
-                    <i class="fab fa-linkedin"></i> <!-- Corrected Font Awesome class for LinkedIn -->
-                </a>
-                <a href="https://github.com/MeetAntala45" target="_blank" class="social-icon">
-                    <i class="fab fa-github"></i> <!-- Corrected Font Awesome class for GitHub -->
-                </a>
-                <a href="https://www.instagram.com/meet_antala_45/" target="_blank" class="social-icon">
-                    <i class="fab fa-instagram"></i> <!-- Corrected Font Awesome class for Instagram -->
-                </a>
-
-
-            </div>
-        </div>
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I am a dedicated Full Stack Web Developer building responsive and
+        scalable web applications. I enjoy solving real-world problems through
+        clean, efficient code and user-focused design.
+      </p>
+      <p>
+        Passionate about continuous learning and modern development practices, I
+        aim to build impactful digital products that are both functional and
+        efficient. I bring a strong foundation in computer science and a
+        commitment to delivering high-quality, maintainable solutions.
+      </p>
     </section>
 
-
-    <footer>
-        <div class="container">
-            <p>© 2025 Meet Antala. All rights reserved.</p>
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span>C</span><span>C++</span><span>HTML</span><span>CSS</span
+            ><span>JavaScript</span><span>Python (Basics)</span><span>C#</span>
+          </div>
         </div>
+        <div class="skill-card">
+          <h3>Frameworks & Libraries</h3>
+          <div class="skill-tags">
+            <span>React.js</span><span>Node.js</span><span>Express.js</span
+            ><span>.NET Core MVC</span><span>Bootstrap</span
+            ><span>Tailwind CSS</span><span>Flutter</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Core Concepts</h3>
+          <div class="skill-tags">
+            <span>Data Structures & Algorithms</span><span>OOPS</span
+            ><span>DBMS</span><span>Operating Systems</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Tools & Platforms</h3>
+          <div class="skill-tags">
+            <span>Git</span><span>Postman</span><span>Netlify</span
+            ><span>Vercel</span><span>Visual Studio</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <h3>Databases</h3>
+          <div class="skill-tags">
+            <span>MongoDB</span><span>MySQL</span><span>Firebase</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="images/quicklearn.png" alt="QuickLearn" />
+          <h3>QuickLearn - Learning Management System</h3>
+          <p>
+            Developed a MERN stack-based Learning Management System enabling
+            instructors to deliver courses and students to access content
+            securely and efficiently
+          </p>
+
+          <div class="links">
+            <a href="https://github.com/MeetAntala45/QuickLearn">Code</a>
+            <a href="https://quicklearn-meet-antala.vercel.app/">Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/Icollab.png" alt="Icollab" />
+          <h3>Icollab - Collaborative Platform</h3>
+          <p>
+            Built Icollab, a MERN-based collaboration platform enabling
+            real-time group messaging, video meeting using Socket.io and WebRTC
+          </p>
+
+          <div class="links">
+            <a href="https://github.com/MeetAntala45/Icollab">Code</a>
+            <a href="https://icollab-eta.vercel.app/">Demo</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/etickets.png" alt="eTickets" />
+          <h3>eTickets - Movie Rent Management System</h3>
+          <p>
+            Developed a Movie Rent Management System using .NET Core MVC to
+            facilitate online movie rentals and order tracking
+          </p>
+          <div class="links">
+            <a href="https://github.com/MeetAntala45/eTickets">Code</a>
+            <a
+              href="https://drive.google.com/file/d/10mqXvmWsdJjsmj1pYbdy8qcJy94jDV8_/view?usp=sharing"
+              >Demo</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/dealplus.png" alt="DealPlus" />
+          <h3>DealPlus - Marketplace for Pre owened Items</h3>
+          <p>
+            Developed a MERN stack-based online marketplace enabling users to
+            buy or sell pre-owned products
+          </p>
+
+          <div class="links">
+            <a href="https://github.com/MeetAntala45/DealPlus">Code</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/passwordgenerator.png" alt="Password Generator" />
+          <h3>Random Password Generator</h3>
+          <p>
+            Allows users to generate customizable, strong passwords and check
+            their strength visually
+          </p>
+
+          <div class="links">
+            <a href="https://github.com/MeetAntala45/PasswordGenerator">Code</a>
+            <a href="https://password-genrator-meet-antala.vercel.app/">Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/ecommerce.png" alt="Ecommerce" />
+          <h3>Ecommerce Application</h3>
+          <p>
+            Designed a fully functional and Efficient E-commerce Website for
+            managing products and user interactions using Django and Python
+          </p>
+
+          <div class="links">
+            <a href="https://github.com/MeetAntala45/Ecommerce_Website">Code</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/invoice.png" alt="Invoice Generator" />
+          <h3>Invoice Generator</h3>
+          <p>
+            A Flutter-based invoice generator and management app designed for
+            shopkeepers
+          </p>
+          <div class="links">
+            <a href="https://github.com/MeetAntala45/invoice_generator">Code</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="images/dsa.png" alt="DS visualizer" />
+          <h3>Data Structures Visualizer</h3>
+          <p>
+            An interactive web application that provides visual representations
+            of various Data Structures
+          </p>
+
+          <div class="links">
+            <a href="https://github.com/MeetAntala45/DSA_Visualizer">Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">
+        <p>Have a project or idea? Let's connect!</p>
+      </h2>
+      <div class="contact-info">
+        <div class="social-icons">
+          <a href="https://linkedin.com/in/meet-antala" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/MeetAntala45" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://instagram.com/meet_antala_45" target="_blank">
+            <i class="fab fa-instagram"></i
+          ></a>
+
+          <a href="#" onclick="copyEmail()"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </section>
+    <div id="toast" class="toast"></div>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="logo">Meet Antala</div>
+          <br />
+          <p class="footer-text">
+            Full-Stack Web Developer committed to building secure, responsive,
+            and user-friendly web applications.
+          </p>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h2 class="footer-heading"></h2>
+          <p class="footer-text">Have questions or feedback?</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email" />
+            <button type="button">Get in Touch</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer-bottom-text">
+        Copyright 2025 @ Meet Antala. All Rights Reserved.
+      </p>
     </footer>
+
     <script>
-        // Hamburger Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Copy Email Function
-        function copyEmail() {
-            navigator.clipboard.writeText('meetantala36@gmail.com').then(function () {
-                alert('Email copied to clipboard!');
-            }, function (err) {
-                console.error('Failed to copy: ', err);
-            });
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        if (menu) {
+          menu.classList.toggle("active");
         }
+      }
+
+      function copyEmail() {
+        const email = "meetantala36@gmail.com";
+        navigator.clipboard
+          .writeText(email)
+          .then(() => showToast(`${email} copied to clipboard!`))
+          .catch((err) => console.error("Copy failed", err));
+      }
+
+      function showToast(message) {
+        const toast = document.getElementById("toast");
+        toast.textContent = message;
+        toast.classList.add("show");
+
+        setTimeout(() => {
+          toast.classList.remove("show");
+        }, 3000);
+      }
     </script>
-</body>
-
-
-
+  </body>
 </html>
