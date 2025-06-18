@@ -3,7 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meet Antala | Portfolio</title>
+    <title>Meet Antala</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -23,11 +30,8 @@
     <header>
       <div class="nav-container">
         <div class="logo">Meet Antala</div>
-        <div class="hamburger" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i>
-        </div>
         <nav>
-          <ul id="nav-links">
+          <ul class="nav-links" id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -35,19 +39,15 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-      <nav id="mobile-menu" class="mobile-nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
     </header>
 
-    <section class="hero" id="home">
+    <section class="hero" id="home" data-aos="flip-left">
       <img src="images/meet45.jpg" alt="Profile" class="hero-img" />
       <h2>Hey, I'm <span>Meet Antala</span></h2>
       <p>
@@ -245,7 +245,7 @@
 
     <section id="contact">
       <h2 class="section-title">
-        <p>Have a project or idea? Let's connect!</p>
+        <p style="font-size: 22px">Have a project or idea? Let's connect!</p>
       </h2>
       <div class="contact-info">
         <div class="social-icons">
@@ -290,14 +290,28 @@
         Copyright 2025 @ Meet Antala. All Rights Reserved.
       </p>
     </footer>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <script>
-      function toggleMenu() {
-        const menu = document.getElementById("mobile-menu");
-        if (menu) {
-          menu.classList.toggle("active");
-        }
-      }
+      AOS.init({
+        duration: 800, // Animation duration (ms)
+        once: true, // Animate only once
+      });
+
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+      const links = navLinks.querySelectorAll("a");
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+        });
+      });
 
       function copyEmail() {
         const email = "meetantala36@gmail.com";
